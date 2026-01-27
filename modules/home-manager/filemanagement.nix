@@ -42,6 +42,7 @@
         };
         extraPackages = with pkgs.bat-extras; [batman batgrep];
       };
+      delta.enable = true;
       fzf = {
         enable = true;
         enableZshIntegration = false;

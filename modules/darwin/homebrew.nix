@@ -21,7 +21,7 @@
     # nixpkgs is best for CLI tools
     casks = [
       # "thock"
-      "alacritty"
+      #"alacritty"
       # OS enhancements
       # "aerospace"
       # "cleanshot"
