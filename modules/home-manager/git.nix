@@ -13,9 +13,17 @@
         defaultBranch = "main";
       };
       core = {
-	      pager = ''
-        delta --dark --highlight-removed --commit-style box --file-style box --theme='Monokai Extended' --plus-color="#0c5246" --plus-emph-color="#033f85" --minus-color="#6e2e13" --minus-emph-color="#870375"
-        '';
+        pager = "delta";
+      };
+      delta = {
+        "true-color" = "always";
+        "syntax-theme" = "DarkNeon";
+        "navigate" = "true";
+        "line-numbers" = "true";
+
+      };
+      diff = {
+        "colorMoved" = "default";
       };
     };
   };

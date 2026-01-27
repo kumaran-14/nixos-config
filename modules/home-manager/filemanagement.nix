@@ -45,12 +45,19 @@
       delta.enable = true;
       fzf = {
         enable = true;
-        enableZshIntegration = false;
+        enableZshIntegration = true;
         tmux.enableShellIntegration = false;
         defaultCommand = "\fd --type f --follow --hidden --exclude .git --color=always";
         fileWidgetCommand = "\fd --exclude .git --type f"; # for when ctrl-t is pressed
         changeDirWidgetCommand = "\fd --type d --hidden --follow --max-depth 3 --exclude .git";
         # TODO: not working see fzf colors seoul night and use env variable to control this instead
+        defaultOptions = [
+          "--layout=reverse"
+          "--cycle"
+          "--border"
+          "--ansi"
+          "--height 70%"
+        ];
         colors = {
           fg = "242";
           bg ="233";

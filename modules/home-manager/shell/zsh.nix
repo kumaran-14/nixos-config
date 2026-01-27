@@ -53,8 +53,8 @@
         # You might not like what I'm doing here, but '/' works like ctrl-r
         # and matches as you type. I've added pattern matches here though.
 
-        bindkey -M vicmd '/' history-incremental-pattern-search-backward # default is vi-history-search-backward
-        bindkey -M vicmd '?' vi-history-search-backward # default is vi-history-search-forward
+        #bindkey -M vicmd '/' history-incremental-pattern-search-backward # default is vi-history-search-backward
+        #bindkey -M vicmd '?' vi-history-search-backward # default is vi-history-search-forward
 
         # Map 'kj' to escape to Normal Mode
         bindkey -M viins 'kj' vi-cmd-mode
