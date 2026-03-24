@@ -20,7 +20,7 @@
         "com.apple.swipescrolldirection" = true; # "natural" scrolling
         "com.apple.keyboard.fnState" = true;
         "com.apple.springing.enabled" = false;
-        "com.apple.trackpad.scaling" = 3.0; # fast
+        "com.apple.trackpad.scaling" = 4.0; # fast
         "com.apple.trackpad.enableSecondaryClick" = true;
         "com.apple.mouse.tapBehavior" = 1; # tap to click
         # enable full keyboard control

@@ -13,13 +13,29 @@
 
     taps = [
       "kamillobinski/thock"
+      #for tmux-fingers
+      "morantron/tmux-fingers"
+      "FelixKratz/formulae"
     ];
+
     # homebrew is best for GUI apps
     brews = [
       #      "ripgrep"
+      "tmux"
+      # mac apple store
+      "mas"
+      # tmux fingers and its dependencies so that nix does not throw error
+      "tmux-fingers"
+      "bdw-gc"
+      "libyaml"
+      "pcre2"
+      "forgit"
+
     ];
     # nixpkgs is best for CLI tools
     casks = [
+      "alfred"
+      "maccy"
       # "thock"
       #"alacritty"
       # OS enhancements
@@ -48,5 +64,14 @@
       # "protonvpn"
       # "spotify"
     ];
+    masApps = {
+       # TODO: manually install these mac apps
+      # "1Blocker" = 1365531024;
+      # "Bitwarden" = 1352778147  ;
+      # "Todoist: To-Do List & Calendar" =  585829637  ;
+      # "Tabs Saver for Safari" =  1440006;
+      # "Save to Raindrop.io" =  1549370672 ;
+      # "Vimari" = 1480933944  ;
+    };
   };
 }

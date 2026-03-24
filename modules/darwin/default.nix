@@ -54,7 +54,8 @@
     extraSpecialArgs = {
       inherit inputs self primaryUser;
     };
-    backupFileExtension = "backup";
+    backupFileExtension = "nix-backup";
+    overwriteBackup = true;
   };
 
   # macos specific settings
@@ -73,6 +74,8 @@
       pkgs.coreutils
       pkgs.git
       pkgs.clang-tools
+      pkgs.llvm
+      pkgs.uv
     ];
     systemPath = [
       "/opt/homebrew/bin"

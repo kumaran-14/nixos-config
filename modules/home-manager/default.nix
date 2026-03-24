@@ -10,9 +10,14 @@
     ./vim.nix
     ./gui/dev-gui.nix
     ./filemanagement.nix
+    ./window-mgmt.nix
     ./shell/devshell.nix
     ./shell/zsh.nix
     ./shell/starship.nix
+    ./shell/tmux.nix
+    ./shell/ai.nix
+    ./gcc.nix
+    ./java.nix
     # ./shell.nix
     # ./mise.nix
   ];

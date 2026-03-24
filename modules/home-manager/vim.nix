@@ -6,6 +6,7 @@
 {
   programs.vim = {
     enable = true;
+    packageConfigurable = pkgs.vim-darwin; # specifically for macos clipboard settings
     defaultEditor = true;
     plugins = with pkgs.vimPlugins; [
       vim-highlightedyank
@@ -15,6 +16,8 @@
       vim-surround
       vim-exchange
       vim-textobj-entire
+      vim-cool
+      fzf-vim
     ];
     extraConfig = ''
       " See macos config from laptop and update it
@@ -58,6 +61,7 @@
       set tabstop=4
       set shiftwidth=4
       set softtabstop=4
+      set textwidth=80
       set expandtab " use spaces instead of tabs.
       set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
 
@@ -81,7 +85,8 @@
       set virtualedit+=block
 
       " ######### use copy and paste from vim to clipboard and clipboad to vim
-      set clipboard=unnamedplus
+      " Tell Vim exactly how to talk to the macOS pasteboard through Alacritty
+      set clipboard=unnamed 
 
       " ############# common typos
       :command WQ wq
@@ -176,6 +181,93 @@
       nnoremap <LEADER>ci< ci<<C-r>"<space>
       nnoremap <LEADER>ci> ci><C-r>"<space>
       nnoremap <LEADER>ci` ci`<C-r>"<space>
+
+      
+
+      " Find files
+      nnoremap <C-p> :Files<CR>
+
+      " List and fuzzy-find open buffers
+      nnoremap <leader>b :Buffers<CR>
+
+      " Quick switch between last two buffers
+      nnoremap <leader><leader> <C-^>
+
+      "############## plugin settings
+      " Plugin: vim-cool
+      let g:cool_total_matches = 1
+
+      "Plugin: 
+
+
     '';
   };
+
+
+
+
+  # TODO: copy useful stuff from above. Keep using SHORCUTS.md to help remember stuff.
+  home.file.".ideavimrc".text = ''
+    " .ideavimrc is a configuration file for IdeaVim plugin. It uses
+    "   the same commands as the original .vimrc configuration.
+    " You can find a list of commands here: https://jb.gg/h38q75
+    " Find more examples here: https://jb.gg/share-ideavimrc
+
+    " Source your .vimrc
+    "source ~/.vimrc
+    " ############################### instead doing it manually
+    
+    " esc in insert mode
+    inoremap kj <esc>
+    
+    " ######################### end manual copy from .vimrc
+
+    " esc in command mode
+    cnoremap kj <C-C>
+    " " Note: In command mode mappings to esc run the command for some odd
+    " " historical vi compatibility reason. We use the alternate method of
+    " " existing which is Ctrl-C
+
+
+    "" -- Suggested options --
+    " Show a few lines of context around the cursor. Note that this makes the
+    " text scroll if you mouse-click near the start or end of the window.
+    set scrolloff=5
+
+    " Do incremental searching.
+    set incsearch
+
+    "" Don't use Ex mode, use Q for formatting.
+    "map Q gq
+
+    "" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+    " Highlight copied text
+    Plug 'machakann/vim-highlightedyank'
+    "" Commentary plugin
+    "Plug 'tpope/vim-commentary'
+
+
+    """ -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+    """ Map \r to the Reformat Code action
+    ""map \r <Action>(ReformatCode)
+
+    """ Map <leader>d to start debug
+    ""map <leader>d <Action>(Debug)
+
+    """ Map \b to toggle the breakpoint on the current line
+    ""map \b <Action>(ToggleLineBreakpoint)
+
+
+    " my kumaran's additions for ideavim
+    set ideajoin
+    set clipboard+=unnamed
+    set clipboard+=ideaput
+    set idearefactormode=keep
+
+
+    " all remaps
+    nnoremap g; :action JumpToLastChange<Enter>
+    nnoremap g, :action JumpToNextChange<Enter>
+  '';
 }
