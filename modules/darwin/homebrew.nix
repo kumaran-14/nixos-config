@@ -36,6 +36,7 @@
     casks = [
       "alfred"
       "maccy"
+      "claude"
       # "thock"
       #"alacritty"
       # OS enhancements
@@ -65,13 +66,17 @@
       # "spotify"
     ];
     masApps = {
-       # TODO: manually install these mac apps
-      # "1Blocker" = 1365531024;
+
+      # below apps are manually installed
+
+      # "1Blocker" = 1365531024; 
       # "Bitwarden" = 1352778147  ;
       # "Todoist: To-Do List & Calendar" =  585829637  ;
       # "Tabs Saver for Safari" =  1440006;
       # "Save to Raindrop.io" =  1549370672 ;
       # "Vimari" = 1480933944  ;
+      # Thor; For switching between apps. TODO: Export shortcuts and keep track of it somewhere here.
+
     };
   };
 }

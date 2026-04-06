@@ -173,6 +173,8 @@
       pyhton = "python";
       got = "git";
       gut = "git";
+      g = "git";
+      reload = ".~/.zshrc && echo 'zsh config sourced ~/.zshrc'";
 
       #### List all files with full pat;
       lff = ''

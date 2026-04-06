@@ -56,7 +56,10 @@
       # tmux is installed via homebrew using nix
       # tpm is installed manually as part of the tmux.conf last step and activated
       # first time running tmux, you probably have to run prefix + I to install plugins
+
+      # all tmux plugins are stored in ~/.config/tmux/plugins/, ignore ~/.tmux/plugins, they seem to be old, not used.
       home.file.".config/tmux/tmux.conf" = {
         source = ../../../dotfiles/tmux.conf;
       };
+
 }

@@ -44,8 +44,10 @@
         ms-vscode-remote.remote-containers
         vscjava.vscode-java-pack
         eamodio.gitlens
-        # isntall manually jeff-hykin.better-cpp-syntax
+        ms-toolsai.jupyter
+        # install manually jeff-hykin.better-cpp-syntax
         # install manually danielpinto8zz6.c-cpp-compile-run
+        # install manually         anthropic.claude-code
       ];
       userSettings = {
         # "gitlens.views.repositories.location"= "scm";

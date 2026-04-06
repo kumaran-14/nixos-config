@@ -76,6 +76,7 @@
       pkgs.clang-tools
       pkgs.llvm
       pkgs.uv
+      pkgs.swig
     ];
     systemPath = [
       "/opt/homebrew/bin"

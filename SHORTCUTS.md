@@ -12,7 +12,9 @@ Use ctrl + shift+p and open vim cheat sheet for references
 ## idea vim
 
 ## vscode other shortcuts
-
+1. command+1 or command+2: move to different panels
+2. ctrl+1 or ctrl+2, move to different tabs
+3. command+shift+left/right arrow: move to left or right tabs
 
 ## idea other shortcuts
 
