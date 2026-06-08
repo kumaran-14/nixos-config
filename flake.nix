@@ -31,6 +31,7 @@
   in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#zeus
+    # TODO: replace zeus
     darwinConfigurations."zeus" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [

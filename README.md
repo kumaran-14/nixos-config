@@ -4,13 +4,37 @@ This Configuration was primarily created for a MacOS system
 
 1. On fresh MacOS install developer tools
 2. Install nix through nix-installer. This was a fork off of determinate-nix installer, which now only installs a closed source determinate nix. This new project will now install upstream nix.
-4. Note: This creates partitions in your mac.
-3. This comes with an uninstaller that you can easily use to uninstall.
-5. For the first ever, you should run
-`nix run nix-darwin -- switch --flake .  `
+3. Note: This creates partitions in your mac.
+4. This comes with an uninstaller that you can easily use to uninstall.
+
+5. Edit flake.nix file and replace zeus with hostname, i.e, darwinConfigurations."my_computer_host_name"
+where replace my_computer_host_name with actual hostname by getting host name to replace by running
+`scutil --get LocalHostName`
+
+or alternatively to 5, set hostname to zeus, to avoid editing configs
+`sudo scutil --set HostName zeus`
+`sudo scutil --set LocalHostName zeus`
+`sudo scutil --set ComputerName zeus`
+
+6. Update 'kums' with actual username in all files, by getting it from 
+`whoami`
+7. For the first time setup, you should run
+
+`sudo nix run nix-darwin -- switch --flake .  `
+or
+`sudo nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake .  `
+
+8. Update nix flake before running darwin update
+`nix flake update`
+
+Debug:
+if ca-certificates cause issues with brew, then just run
+`brew install --build-from-source ca-certificates`
+and then proceed to step 7
+
 
 ## Updating Configuration
-
+Note: replace zeus with actual host name
 1. For existing files, change them, and run:
 `sudo darwin-rebuild switch --flake .#zeus --option eval-cache false --show-trace`
 2. For new files, first add them to git, to allow nix to version track them
@@ -21,11 +45,11 @@ TODO: Fix the backup issue: backupCommand is another option
 Note: this is fixed now with overwriteBackup set to true
 
 ## Tmux
-Tmux alone is special, installed outside of homemanager, but conf managed through nix. This is because I could not get tmux-fingers work with tmux. In general, plugings are a mess.
+Tmux alone is special, installed outside of homemanager, but conf managed through nix. This is because I could not get tmux-fingers work with tmux. In general, plugins are a mess.
 
 
 
-## Shorcuts
+## Shortcuts
 
 Read SHORTCUTS.md
 
