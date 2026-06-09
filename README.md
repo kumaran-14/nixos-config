@@ -47,6 +47,11 @@ Note: this is fixed now with overwriteBackup set to true
 ## Tmux
 Tmux alone is special, installed outside of homemanager, but conf managed through nix. This is because I could not get tmux-fingers work with tmux. In general, plugins are a mess.
 
+First time and after every edit, do not forget to hit <prefix>+I for plugin installs
+
+## Git
+1. For a new machine, you need to setup a new ssh key, add it to github
+2. Add github.com host in ssh config if needed
 
 
 ## Shortcuts
@@ -65,3 +70,9 @@ windows = (option) =
 
 ## Mac Apps
 1. Manually install the mac apps in homebrew.nix
+
+
+
+Sync Manually
+Use these types of mac settings manually from computer
+1. Dock settings

@@ -128,7 +128,7 @@
 
     '';
 
-    initExtra = ''
+    initContent = ''
         # Add your forgit sourcing here
         [ -f "/opt/homebrew/share/forgit/forgit.plugin.zsh" ] && source "/opt/homebrew/share/forgit/forgit.plugin.zsh"
     '';
@@ -148,6 +148,7 @@
 
       c = "clear";
       cls = "clear";
+      clera = "clear";
 
       # this is ls using eza
       ls = "eza --icons --hyperlink --git --classify=always -la";
