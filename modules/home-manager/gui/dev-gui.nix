@@ -149,7 +149,7 @@
           "workbench.action.tasks.configureTaskRunner"
           "workbench.action.tasks.runTask"
         ];
-        "C_Cpp.default.compilerPath" = "/etc/profiles/per-user/kums/bin/gcc";
+        "C_Cpp.default.compilerPath" = "/etc/profiles/per-user/kumsgs/bin/gcc";
         "code-runner.runInTerminal" = "true";
       };
       keybindings = [

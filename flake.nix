@@ -1,5 +1,5 @@
 {
-  description = "kums multi host macos and linux nixos config";
+  description = "kumsgs multi host macos and linux nixos config";
 
   inputs = {
     # Where we get most of our software. Giant mono repo with recipes
@@ -27,11 +27,10 @@
     nix-homebrew,
     ...
   } @ inputs: let
-    primaryUser = "kums";
+    primaryUser = "kumsgs";
   in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#zeus
-    # TODO: replace zeus
     darwinConfigurations."zeus" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [

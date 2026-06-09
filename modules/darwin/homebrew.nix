@@ -8,7 +8,6 @@
       cleanup = "zap";
     };
 
-    caskArgs.no_quarantine = true;
     global.brewfile = true;
 
     taps = [
@@ -38,7 +37,7 @@
       "maccy"
       "claude"
       # "thock"
-      #"alacritty"
+      "alacritty"
       # OS enhancements
       # "aerospace"
       # "cleanshot"
